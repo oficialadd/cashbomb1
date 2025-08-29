@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirigiendo a WhatsApp...</title>
+
+  <script>
+    // Lista de números disponibles
+    const numeros = [
+      "5493512378067", 
+      "5493518010198",
+      "5493518080973"
+    ];
+
+    // Selección aleatoria
+    const elegido = numeros[Math.floor(Math.random() * numeros.length)];
+
+    // Mensaje predefinido (codificado para URL)
+    const mensaje = encodeURIComponent("Hola buenas quiero info y mi 30%");
+
+    // Armar la URL de WhatsApp
+    const urlWhatsApp = `https://wa.me/${elegido}?text=${mensaje}`;
+
+    // Redirigir automáticamente
+    window.location.href = urlWhatsApp;
+  </script>
+</head>
+<body>
+</body>
+</html>
